@@ -22,6 +22,7 @@ export class AppComponent {
     }
   }
   // test
+  // eslint Befehl: npx eslint . --format=json --output-file=eslingReport.json
 }
 
 
