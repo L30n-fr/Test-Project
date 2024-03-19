@@ -16,6 +16,7 @@ export class AppComponent {
   test(){
     this.title = 'Döner Ömer 🧅';
   }
+  // test
 }
 
 
