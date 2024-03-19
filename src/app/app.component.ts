@@ -9,12 +9,17 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
+  constructor() {
+    this.test();
+  }
+
   title = 'Döner Ömer 🧅';
 
-  data: any;
-
   test(){
-    this.title = 'Döner Ömer 🧅';
+    if (1 == 1) {
+      this.title = 'Döner Ömer 🧅'
+    }
   }
   // test
 }
