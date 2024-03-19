@@ -11,6 +11,8 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'Döner Ömer 🧅';
 
+  data: any;
+
   test(){
     this.title = 'Döner Ömer 🧅';
   }
