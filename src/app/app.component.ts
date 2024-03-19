@@ -21,8 +21,9 @@ export class AppComponent {
       this.tilte = 'Döner Ömer 🧅'
     }
   }
-  // test
+  // t est
   // eslint Befehl: npx eslint . --format=json --output-file=eslingReport.json
+  //sed -i 's,/Users/leonfranken/Documents/angular-test-project/src/app/,./app/,g' eslingReport.json
 }
 
 
