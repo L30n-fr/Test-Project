@@ -18,7 +18,7 @@ export class AppComponent {
 
   test(){
     if (1 == 1) {
-      this.title = 'Döner Ömer 🧅'
+      this.tilte = 'Döner Ömer 🧅'
     }
   }
   // test
