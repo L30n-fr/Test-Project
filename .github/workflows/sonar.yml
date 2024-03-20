@@ -25,6 +25,7 @@ jobs:
       - name: change to relative paths
         run: |
           sed -i 's,/Users/leonfranken/Documents/angular-test-project/src/app/,./src/app/,g' eslint-report.json
+        if: true  
   
   
   sonarcloud:
