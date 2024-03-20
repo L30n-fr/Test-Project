@@ -27,7 +27,7 @@ jobs:
         run: cat eslint-report.json
       - name: change to relative paths
         run: |
-          sed -i '' 's,"${GITHUB_WORKSPACE}",./,g' ./eslint-report.json || true
+          sed -i '' 's,/Users/leonfranken/Documents/angular-test-project/src/app/,./src/app/,g' ./eslint-report.json || true
         
  
   
