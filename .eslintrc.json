@@ -16,11 +16,4 @@
         "@typescript-eslint"
     ],
     "rules": {},
-    "settings": {
-        "eslint-plugin": {
-            "config": {
-                "source": "./src/app/"
-            }
-        }
-    }
 }
