@@ -32,7 +32,7 @@ jobs:
         run: |
           sed -i '' "s,${GITHUB_WORKSPACE},./src/app,g" ./reports/eslint-report.json || true
       - name: test
-        run: cat eslint-report.json  
+        run: cat reports/eslint-report.json  
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
