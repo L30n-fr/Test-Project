@@ -34,7 +34,7 @@ jobs:
       - name: test
         run: cat eslint-report.json  
       - name: upload artifacts
-        uses: action/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: eslint-artifacts
           path: dist/sonar    
