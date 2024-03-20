@@ -27,7 +27,7 @@ jobs:
           npx eslint . --config .eslintrc.json --format=json --output-file=reports/eslint-report.json
         continue-on-error: true  
       - name: sed statement
-        run: sed -i '' "s|${GITHUB_WORKSPACE}||g" ./reports/eslint-report.json
+        run: sed -i '' "s|${GITHUB_WORKSPACE}||g" /reports/eslint-report.json
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
