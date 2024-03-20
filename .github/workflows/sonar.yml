@@ -28,7 +28,7 @@ jobs:
         continue-on-error: true  
       - name: change to relative paths
         run: |
-          sed -i '' "s,${GITHUB_WORKSPACE},./src/app,g" ./reports/eslint-report.json || true
+          sed -i '' "s,${GITHUB_WORKSPACE},./,g" ./reports/eslint-report.json || true
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
