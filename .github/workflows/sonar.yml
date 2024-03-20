@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: eslint-artifacts
-          path: dist    
+          path: eslint-report.json    
         
  
   
@@ -54,7 +54,7 @@ jobs:
         uses: actions/download-artifact@v3
         with: 
           name: eslint-artifacts
-          path: eslint    
+          path: dist    
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
