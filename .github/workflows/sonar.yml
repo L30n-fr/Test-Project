@@ -26,9 +26,6 @@ jobs:
         run: |
           npx eslint . --config .eslintrc.json --format=json --output-file=reports/eslint-report.json
         continue-on-error: true  
-      - name: change to relative paths
-        run: |
-          sed -i '' "s,./,./,g" ./reports/eslint-report.json || true
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
