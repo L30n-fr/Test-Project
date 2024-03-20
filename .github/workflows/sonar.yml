@@ -17,11 +17,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: npm ci  
-      - name: install eslint
-        run: npm init @eslint/config -- --config semistandard -yes
       - name: run eslint
         run: |
-          npx eslint . --format=json --output-file=eslint-report.json
+          npx eslint . --config .eslintrc.json --format=json --output-file=eslint-report.json
       - name: change to relative paths
         run: |
           sed -i 's,/Users/leonfranken/Documents/angular-test-project/src/app/,./src/app/,g' eslint-report.json
