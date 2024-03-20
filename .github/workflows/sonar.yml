@@ -13,8 +13,10 @@ jobs:
     if: github.event.inputs.smell_check == 'true'
     runs-on: ubuntu-latest
     steps:
-      - name: install eslint-config package
-        uses: eslint/create-config@0.4.6 
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci  
       - name: install eslint
         run: npm init @eslint/config
       - name: run eslint
