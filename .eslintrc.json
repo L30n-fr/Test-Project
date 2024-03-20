@@ -19,7 +19,7 @@
     "settings": {
         "eslint-plugin": {
             "config": {
-                "source": "./src/app/"
+                "source": "/src/app/"
             }
         }
     }
