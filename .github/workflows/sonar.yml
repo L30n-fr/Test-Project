@@ -12,6 +12,9 @@ jobs:
     name: ESLint
     if: github.event.inputs.smell_check == 'true'
     runs-on: ubuntu-latest
+    container:
+      image: trion/ng-cli:17.0.9
+      options: --user root
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
