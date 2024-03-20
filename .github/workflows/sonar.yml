@@ -1,13 +1,31 @@
 name: Build
 on:
-  push:
-    branches:
-      - main
   pull_request:
     types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      smell_check:
+        type: boolean
+        description: 'Are you sure you want to start the Code analysis?'  
 jobs:
+  eslint:
+    name: ESLint
+    if: github.event.inputs.smell_check == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: install eslint
+        run: npm init @eslint/config
+      - name: run eslint
+        run: |
+          npx eslint . --format=json --output-file=eslint-report.json
+      - name: change to relative paths
+        run: |
+          sed -i 's,/Users/leonfranken/Documents/angular-test-project/src/app/,./src/app/,g' eslingReport.json
+  
+  
   sonarcloud:
     name: SonarCloud
+    needs: [eslint]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
