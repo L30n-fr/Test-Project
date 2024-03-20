@@ -21,7 +21,7 @@ jobs:
         run: npm install eslint @eslint/eslintrc  
       - name: run eslint
         run: |
-          npm eslint . --config .eslintrc.json --format=json --output-file=eslint-report.json
+          npx eslint . --config .eslintrc.json --format=json --output-file=eslint-report.json
       - name: change to relative paths
         run: |
           sed -i 's,/Users/leonfranken/Documents/angular-test-project/src/app/,./src/app/,g' eslint-report.json
