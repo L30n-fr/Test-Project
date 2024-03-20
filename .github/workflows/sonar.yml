@@ -23,7 +23,7 @@ jobs:
         run: |
           npx eslint . --config .eslintrc.json --format=json --output-file=eslint-report.json
         continue-on-error: true  
-      - name: change to relative paths 
+      - name: change to relative paths
         run: |
           sed -i '' 's,/Users/leonfranken/Documents/angular-test-project/src/app/,./src/app/,g' ./eslint-report.json || true
         
